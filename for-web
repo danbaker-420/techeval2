@@ -36,10 +36,12 @@
             <h1 class="text-xl font-bold text-gray-900">
                 GenAI Legal Tech Evaluation
             </h1>
-            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+            <nav id="main-nav" class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="#summary" class="text-gray-600 hover:text-procore-orange">Summary</a>
                 <a href="#scorecard" class="text-gray-600 hover:text-procore-orange">Scorecard</a>
                 <a href="#differentiators" class="text-gray-600 hover:text-procore-orange">Differentiators</a>
+                <a href="#customer-success" class="text-gray-600 hover:text-procore-orange">Customer Success</a>
+                <a href="#platform-faq" class="text-gray-600 hover:text-procore-orange">Platform FAQ</a>
                 <!-- Updated link to external Google Sheet --><a href="https://docs.google.com/spreadsheets/d/1nj1W-TSulpQqGEfh1iHENkcjFY6GUnBPlVRFOkxrHFQ/edit?gid=1049062535#gid=1049062535" target="_blank" class="text-gray-600 hover:text-procore-orange">Full Scorecard (External)</a>
             </nav>
             <a href="#conclusion" class="hidden sm:block px-4 py-2 bg-procore-orange text-white font-semibold rounded-lg shadow-md hover:bg-opacity-90 transition duration-300">
@@ -208,7 +210,7 @@
                         <li class="flex items-start">
                             <i class="fa-solid fa-money-bill-wave text-xl text-failure-red mt-1 mr-3 flex-shrink-0"></i>
                             <div>
-                                <strong class="gray-900">Poor ROI (Score of 2):</strong> Unclear or unfavorable long-term cost structure posing a potential budget risk.
+                                <strong class="gray-900">Poor ROI (Score of 2):</strong> Unclear or unfavorable long-term cost structure and tradeoff potential posing a potential budget risk.
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -223,12 +225,60 @@
         </div>
     </section>
 
+    <!-- 4.5. Harvey Customer Success & Adoption -->
+    <section id="customer-success" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-10 text-center">Harvey Customer Success & Adoption</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Adoption/Scale -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-procore-orange">
+                    <i class="fa-solid fa-scale-balanced text-4xl text-procore-orange mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Market Adoption & Scale</h3>
+                    <p class="text-gray-700">Harvey is already used by <strong>over 100 law firms</strong>, including half of the Vault 20, demonstrating rapid enterprise-level adoption and stability in the legal market.</p>
+                    <p class="text-sm text-gray-500 mt-2">Referenceable customers include PwC, Allen & Overy, Simpson Thacher, and Vinson and Elkins.</p>
+                </div>
+
+                <!-- Practice Areas -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-procore-orange">
+                    <i class="fa-solid fa-sitemap text-4xl text-procore-orange mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Versatile Practice Coverage</h3>
+                    <p class="text-gray-700">The platform is versatile and suitable for any practice area, excelling in tasks across <strong>litigation, transactional, and in-house</strong> matters, particularly where document context is key.</p>
+                </div>
+
+                <!-- Day-to-Day Integration -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-procore-orange">
+                    <i class="fa-solid fa-route text-4xl text-procore-orange mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Workflow Integration</h3>
+                    <p class="text-gray-700">Lawyers successfully integrate Harvey for daily tasks such as **Email Drafting**, **Document Understanding**, **Redline Analysis**, and deep **EDGAR Filing Research**.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- 5. Final Conclusion Quote (Slide 11) --><section id="conclusion" class="py-20 bg-procore-orange">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <blockquote class="text-4xl font-semibold italic text-white leading-snug">
                 "Harvey is the superior strategic choice, offering a more advanced AI platform, critical workflow customization, and a significantly stronger long-term ROI."
             </blockquote>
             <cite class="block mt-6 text-xl font-light text-white opacity-90">— Final Evaluation Summary</cite>
+        </div>
+    </section>
+    
+    <!-- 6. New FAQ Section (Linked from Nav) -->
+    <section id="platform-faq" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">Platform FAQ Reference</h2>
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center shadow-lg">
+                <i class="fa-solid fa-file-pdf text-4xl text-failure-red mb-3"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Harvey Platform FAQ [11.19.24].pdf</h3>
+                <p class="text-gray-600 mb-4">Click below to open the comprehensive Q&A document covering Product, Security, Data, and Performance details.</p>
+                <!-- This links to the actual uploaded file, providing a direct reference for users -->
+                <a href="uploaded:Harvey Platform FAQ [11.19.24].pdf" target="_blank" class="inline-block px-6 py-3 bg-procore-orange text-white font-semibold rounded-lg shadow-md hover:bg-opacity-90 transition duration-300">
+                    View Full PDF Document
+                </a>
+            </div>
         </div>
     </section>
 
@@ -239,5 +289,33 @@
         </div>
     </footer>
 
+    <script>
+        // Smooth scrolling implementation for internal links that point to IDs
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('#main-nav a[href^="#"], a[href^="#conclusion"]');
+
+            navLinks.forEach(link => {
+                // Ensure it's an internal link (not an external URL or the PDF link)
+                if (link.getAttribute('href').startsWith('#')) {
+                    link.addEventListener('click', function(e) {
+                        // The external link to the scorecard uses a different target and should not be intercepted
+                        if (this.getAttribute('target') === '_blank') {
+                            return;
+                        }
+
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
